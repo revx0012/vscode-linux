@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Check if the system is running Linux
+if [[ "$(uname)" != "Linux" ]]; then
+  echo -e "\033[31mYou must run this script on Linux!\033[0m"
+  exit 1
+fi
+
+# Check if the distribution is Debian or Ubuntu
+if [[ ! -f "/etc/os-release" || ! "$(grep -E -i '^(ID|NAME)="?(debian|ubuntu)"?' /etc/os-release)" ]]; then
+  echo -e "\033[31mThis script only supports Debian-based distributions!\033[0m"
+  exit 1
+fi
+
+# Check if sudo is available
+if ! command -v sudo >/dev/null 2>&1; then
+  echo -e "\033[31mThis script requires sudo. Please install sudo package and try again.\033[0m"
+  exit 1
+fi
+
+# Install wget if not already installed
+if ! command -v wget >/dev/null 2>&1; then
+  sudo apt update
+  sudo apt install -y wget
+fi
+
+# Create directories if they don't exist
+sudo mkdir -p /etc/apt/trusted.gpg.d
+sudo mkdir -p /etc/apt/sources.list.d
+
+# Download and move the files
+sudo wget -qO /etc/apt/trusted.gpg.d/microsoft.gpg "https://github.com/revx0012/vscode-linux/raw/main/repos/debian-ubuntu/trusted.gpg.d/microsoft.gpg"
+sudo wget -qO /etc/apt/sources.list.d/vscode.list "https://raw.githubusercontent.com/revx0012/vscode-linux/main/repos/debian-ubuntu/sources.list.d/vscode.list"
+
+# Update package manager
+sudo apt update
+
+echo "install is now done, use 'sudo apt install code' if you want to install vscode."
