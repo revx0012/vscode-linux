@@ -10,4 +10,4 @@ no, they are the same commands.
 
 there are distros missing.. i know im just gonna add them later.
 
-im a busy man.
+sorry im just busy.
