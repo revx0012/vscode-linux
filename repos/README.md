@@ -1,6 +1,6 @@
 # whats this?
 
-this is where the repos are stored, it will add thrm into your system without going into vscode, so you can install it in one command!
+this is where the repos are stored, it will add them into your system without going into vscode, so you can install it in one command!
 
 # should i do something with it?
 
