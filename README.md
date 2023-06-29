@@ -1,6 +1,6 @@
 # Archived
 
-Yeah, im just gonna ignore this because its not useful unfortunately.
+Yeah, im just gonna ignore this because its not useful anymore unfortunately...
 
 
 # where do i install this?
@@ -8,9 +8,6 @@ Yeah, im just gonna ignore this because its not useful unfortunately.
 you can either you can install it in your linux machine or proot (only on termux)
 go around the folder and see
 
-# are the commands different?
-
-no, they are the same commands.
 
 # Note
 
