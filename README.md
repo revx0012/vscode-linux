@@ -1,6 +1,7 @@
 # where do i install this?
 
 you can either you can install it in your linux machine or proot (only on termux)
+go around the folder and see
 
 # are the commands different?
 
