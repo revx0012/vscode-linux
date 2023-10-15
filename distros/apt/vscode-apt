@@ -1,12 +1,14 @@
 #!/bin/bash
 
+
 # Check if the system is running Linux
 if [[ "$(uname)" != "Linux" ]]; then
   echo -e "\033[31mYou must run this script on Linux!\033[0m"
   exit 1
 fi
 
-if [[ ! -f "/etc/os-release" || ! "$(grep -E -i '^(ID|NAME)="?(debian|ubuntu)"?' /etc/os-release)" ]]; then
+# Check if there's apt
+if ! command -v apt >/dev/null 2>&1; then
   echo -e "\033[31mThis script only supports Apt-based distributions!\033[0m"
   exit 1
 fi
