@@ -1,16 +1,9 @@
-# Archived
+# Where do i install this?
 
-Yeah, im just gonna ignore this because its not useful anymore unfortunately...
-
-
-# where do i install this?
-
-you can either you can install it in your linux machine or proot (only on termux)
-go around the folder and see
+You can either you can install it in your linux machine or proot (only on termux)
+Go around the folder and [see](https://github.com/revx0012/vscode-linux/distros)
 
 
 # Note
 
-there are distros missing.. i know im just gonna add them later.
-
-sorry im just busy.
+There are package manager missing.. i know im just gonna add them later.
